@@ -9,6 +9,7 @@ body{
   scroll-behavior:smooth;
 }
 
+
 /* NAV */
 .nav{
   display:flex;justify-content:space-between;padding:15px 30px;
