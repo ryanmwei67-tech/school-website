@@ -81,6 +81,11 @@ body{
   margin-top:20px;
 }
 
+img{
+  max-width:100%;
+  display:block;
+}
+
 .img-box{
   position:relative;
   overflow:hidden;
@@ -98,6 +103,7 @@ body{
 .img-box:hover img{
   transform:scale(1.1);
 }
+
 
 /* OVERLAY TEXT */
 .overlay{
