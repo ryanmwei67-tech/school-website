@@ -3,164 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mwei's Quantum Bootcamp</title>
+<title>METEITEI SCHOOL</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    
-<!-- NAVBAR -->
-<header class="navbar">
-    <h1 class="logo">KAPSABET <span>BOOTCAMP</span></h1>
+<!-- NAV -->
+<header class="nav">
+  <div class="logo">METEITEI SCHOOL</div>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#activity">Activities</a>
-        <a href="#courses">Courses</a>
-        <a href="#projects">Projects</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="navLinks" class="nav-links">
+    <a href="#about">About</a>
+    <a href="#history">History</a>
+    <a href="#academics">Academics</a>
+    <a href="#admissions">Admissions</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <!-- HERO -->
-<section id="home" class="hero">
-    <h2>Build the Future with Code & Robotics</h2>
-    <p>Join the most advanced bootcamp for young innovators.</p>
-
-    <div class="hero-buttons">
-        <a href="#index2.html" class="glow-gold">Get Started</a>
-        <a href="index5.html" class="glow-gold">Join Now</a>
-        <a href="#index4.html" class="glow-gold">Learn More</a>
-        <a href="index3.html" class="glow-gold">Get started</a>
-        <a href="#index6.html" class="glow-gold">contact</a>
-    </div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Excellence • Discipline • Leadership</h1>
+    <p>Welcome to Meteitei School</p>
+    <button onclick="openLogin()">Student Portal</button>
+  </div>
 </section>
 
-<!-- ACTIVITY -->
-<section id="activity" class="section">
-    <h2>Bootcamp Journey</h2>
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="modal">
+  <div class="modal-box">
+    <h2>Login</h2>
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <button onclick="closeLogin()">Close</button>
+  </div>
+</div>
 
-    <div class="timeline">
-        <div class="timeline-item">
-            <h3>Week 1</h3>
-            <p>HTML Basics</p>
-        </div>
-
-        <div class="timeline-item">
-            <h3>Week 2</h3>
-            <p>CSS Design</p>
-        </div>
-
-        <div class="timeline-item">
-            <h3>Week 3</h3>
-            <p>JavaScript</p>
-        </div>
-    </div>
-
-    <a href="index4.html" class="glow-gold">Learn More</a>
+<!-- ABOUT -->
+<section id="about" class="section fade">
+  <h2>About Us</h2>
+  <p>We nurture discipline, leadership and academic excellence.</p>
 </section>
 
-<!-- COURSES -->
-<section id="courses" class="section">
-    <h2>Our Programs</h2>
-
-    <div class="card-container">
-        <div class="card">
-            <h3>Beginner</h3>
-            <p>HTML, CSS, Scratch, Robotics</p>
-        </div>
-
-        <div class="card">
-            <h3>Intermediate</h3>
-            <p>JavaScript, Arduino, IoT</p>
-        </div>
-
-        <div class="card">
-            <h3>Advanced</h3>
-            <p>AI, Python, Robotics Engineering</p>
-        </div>
-    </div>
-
-    <a href="index2.html" class="glow-gold">Get started</a>
+<!-- HISTORY -->
+<section id="history" class="section light fade">
+  <h2>History</h2>
+  <p>Founded to provide quality education and leadership.</p>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="section">
-    <h2>Projects</h2>
-
-    <div class="projects-grid">
-        <div class="project-card">
-            <img src="https://picsum.photos/400/300?1">
-            <h3>Portfolio</h3>
-        </div>
-
-        <div class="project-card">
-            <img src="https://picsum.photos/400/300?2">
-            <h3>AI Bot</h3>
-        </div>
-
-        <div class="project-card">
-            <img src="https://picsum.photos/400/300?3">
-            <h3>Robot</h3>
-        </div>
-
-        <div class="project-card">
-            <img src="https://picsum.photos/400/300?4">
-            <h3>E-commerce</h3>
-        </div>
-    </div>
-
-    <a href="index3.html" class="glow-gold">Enroll Now</a>
+<!-- ACADEMICS -->
+<section id="academics" class="section fade">
+  <h2>Academics</h2>
+  <div class="cards">
+    <div class="card">Primary</div>
+    <div class="card">Secondary</div>
+    <div class="card">ICT</div>
+  </div>
 </section>
 
-<!-- PRICING -->
-<section id="pricing" class="section">
-    <h2>Pricing</h2>
+<!-- ADMISSIONS -->
+<section id="admissions" class="section light fade">
+  <h2>Admissions</h2>
+  <p>Apply through our structured process.</p>
+</section>
 
-    <div class="pricing-container">
-        <div class="card">$250 Beginner</div>
-        <div class="card">$610 Intermediate</div>
-        <div class="card">$1000 Advanced</div>
-        <div class="card">$1999 Professional</div>
-        <div class="card">$2999 Elite</div>
-    </div>
+<!-- GALLERY -->
+<section id="gallery" class="section fade">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="https://picsum.photos/300/200?1">
+    <img src="https://picsum.photos/300/200?2">
+    <img src="https://picsum.photos/300/200?3">
+  </div>
+</section>
 
-    <a href="index5.html" class="glow-gold">Enroll Now</a>
+<!-- NEWS -->
+<section id="news" class="section light fade">
+  <h2>Latest News</h2>
+  <div class="cards">
+    <div class="card">KCSE Results Released</div>
+    <div class="card">New Term Begins</div>
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
-    <h2>Contact Us</h2>
-
-    <div class="contact-container">
-
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message..." required></textarea>
-            <button type="submit" class="glow-gold">Send Message</button>
-        </form>
-
-        <div class="contact-info">
-            <h3>Get in Touch</h3>
-            <p>📍 Kapsabet, Kenya</p>
-            <p>📞 +254 757 769 044 / +254 784 306 676</p>
-            <p>📧 bootcamp@email.com</p>
-        </div>
-
-    </div>
-
-    <a href="index6.html" class="glow-gold">Enroll Now</a>
+<section id="contact" class="section fade">
+  <h2>Contact</h2>
+  <form>
+    <input placeholder="Name">
+    <input placeholder="Email">
+    <textarea placeholder="Message"></textarea>
+    <button>Send</button>
+  </form>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    <p>© 2026 Mwei's Quantum Bootcamp</p>
-    <p>POWERED BY KB SENIOR'S</p>
+  <p>© 2026 Meteitei School</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
