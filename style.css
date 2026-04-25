@@ -1,73 +1,113 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-body{
-  background:#f5f7fa;
+body {
+  background: #0f172a;
+  color: white;
 }
 
-/* NAV */
-.nav{
-  display:flex;
-  justify-content:space-between;
-  padding:15px 30px;
-  background:#001f3f;
-  color:white;
-  position:fixed;
-  width:100%;
-  z-index:1000;
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #020617;
+  position: sticky;
+  top: 0;
 }
 
-.nav-links a{
-  color:white;
-  margin:0 10px;
-  text-decoration:none;
+.logo {
+  color: #38bdf8;
 }
 
-.menu-toggle{
-  display:none;
-  cursor:pointer;
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
 }
 
 /* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-  url("images/school1.jpg");
-  color:white;
-  text-align:center;
+.hero {
+  height: 90vh;
+  background: linear-gradient(to right, #020617aa, #020617aa),
+              url('https://picsum.photos/1200/800');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 45px;
+}
+
+.hero p {
+  margin: 20px 0;
+  color: #94a3b8;
+}
+
+/* BUTTON */
+.btn {
+  background: #38bdf8;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0ea5e9;
 }
 
 /* SECTIONS */
-.section{
-  padding:90px 20px;
-  text-align:center;
+.section {
+  padding: 90px 20px;
+  text-align: center;
 }
 
-.light{
-  background:#eef2f7;
+.dark {
+  background: #020617;
 }
 
-/* CARDS */
-.cards{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
+/* GRID */
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.card{
-  background:white;
-  padding:20px;
-  border-radius:10px;
-  width:250px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+/* STEPS */
+.steps {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.steps li {
+  margin: 10px 0;
 }
 
 /* GALLERY */
@@ -99,18 +139,19 @@ body{
   text-align:center;
   padding:10px;
 }
-
 /* FORM */
-form{
-  max-width:400px;
-  margin:auto;
-  display:flex;
-  flex-direction:column;
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 10px;
 }
 
-form input, textarea{
-  margin:10px 0;
-  padding:10px;
+input, textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
 }
 
 /* MODAL */
@@ -167,4 +208,11 @@ form input, textarea{
   .menu-toggle{
     display:block;
   }
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #020617;
 }
