@@ -1,56 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meteitei Senior School</title>
-
-<meta name="description" content="Meteitei Senior School - Excellence, Discipline and Leadership">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>METEITEI SCHOOL</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="nav" id="navbar">
-  <div class="logo">METEITEI SENIOR SCHOOL</div>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-  <nav id="navLinks" class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#history">History</a>
-    <a href="#academics">Academics</a>
-    <a href="#news">News</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
+<!-- NAVBAR -->
+<header class="header">
+  <h1 class="logo">METEITEI SCHOOL</h1>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#history">History</a></li>
+      <li><a href="#academics">Academics</a></li>
+      <li><a href="#admissions">Admissions</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 </header>
 
 <!-- HERO -->
 <section id="home" class="hero">
   <div class="hero-content">
-    <h1>METEITEI SENIOR SCHOOL</h1>
-    <p>Excellence • Discipline • Leadership</p>
-    <button onclick="openLogin()">Student Portal</button>
+    <h2>Welcome to METEITEI SCHOOL</h2>
+    <p>Shaping Future Leaders Through Knowledge, Discipline & Innovation</p>
+    <a href="#admissions" class="btn">Apply Now</a>
   </div>
 </section>
 
-<!-- WHY -->
-<section class="section">
-  <h2>Why Choose Us</h2>
-  <div class="cards">
-    <div class="card">Qualified Teachers</div>
-    <div class="card">Strong Discipline</div>
-    <div class="card">Excellent Results</div>
-  </div>
-</section>
 
 <!-- ABOUT -->
-<section id="about" class="section light">
+<section id="about" class="section">
   <h2>About Us</h2>
-  <p>Meteitei Senior School provides quality education focused on academic success and leadership.</p>
+  <p>
+    METEITEI SCHOOL is committed to academic excellence and holistic development.
+    We provide a nurturing environment where students grow intellectually,
+    socially, and morally. Our mission is to prepare learners for a dynamic world.
+  </p>
 </section>
 
 <!-- HISTORY -->
@@ -60,31 +51,40 @@
 </section>
 
 <!-- ACADEMICS -->
-<section id="academics" class="section light">
-  <h2>Academics</h2>
-  <div class="cards">
-    <div class="card"><h3>Secondary</h3><p>KCSE Excellence</p></div>
-    <div class="card"><h3>ICT</h3><p>Digital Skills</p></div>
-    <div class="card"><h3>Sports</h3><p>Talent Development</p></div>
+<section id="academics" class="section dark">
+  <h2>Our Academics</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Primary Education</h3>
+      <p>Strong foundation in literacy, numeracy, and creativity.</p>
+    </div>
+    <div class="card">
+      <h3>Secondary Education</h3>
+      <p>Advanced learning with focus on sciences, arts, and leadership.</p>
+    </div>
+    <div class="card">
+      <h3>ICT & Innovation</h3>
+      <p>Modern labs teaching coding, robotics, and digital skills.</p>
+    </div>
   </div>
 </section>
 
-<!-- NEWS -->
-<section id="news" class="section">
-  <h2>Latest News</h2>
-  <div class="cards">
-    <div class="card">
-      <small>March 2026</small>
-      <h3>KCSE Results</h3>
-      <p>Students performed excellently.</p>
-    </div>
-    <div class="card">
-      <small>April 2026</small>
-      <h3>New Term</h3>
-      <p>Students reporting next week.</p>
-    </div>
-  </div>
+<!-- ADMISSIONS -->
+<section id="admissions" class="section">
+  <h2>Admissions</h2>
+  <p>
+    Join METEITEI SCHOOL and become part of a community dedicated to excellence.
+    Our admissions process is simple and transparent.
+  </p>
+  <ul class="steps">
+    <li>Fill Application Form</li>
+    <li>Submit Required Documents</li>
+    <li>Interview / Assessment</li>
+    <li>Admission Confirmation</li>
+  </ul>
+  <a href="#contact" class="btn">Get Started</a>
 </section>
+
 
 <!-- GALLERY -->
 <section id="gallery" class="section light">
@@ -110,16 +110,17 @@
 
 <!-- CONTACT -->
 <section id="contact" class="section">
-  <h2>Contact</h2>
+  <h2>Contact Us</h2>
 
   <p>📍 Nandi County</p>
   <p>📞 +254 757 769 044</p>
 
-  <form>
-    <input type="text" placeholder="Name">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Message"></textarea>
-    <button type="button" onclick="sendMessage()">Send</button>
+
+  <form id="contactForm">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button class="btn">Send Message</button>
   </form>
 
   <iframe 
@@ -145,6 +146,13 @@
     <button onclick="closeLogin()">Close</button>
   </div>
 </div>
+
+<script src="script.js"></script>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 METEITEI SCHOOL | Excellence in Education</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
