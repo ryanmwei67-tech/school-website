@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meteitei School — Excellence in Education</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meteitei School — Excellence in Education</title>
+<link rel="icon" href="frontend/images/image/school0.jpg" type="image/jpeg">
+<meta property="og:title" content="Meteitei School — Excellence in Education, Nandi County">
+<meta property="og:description" content="A community dedicated to academic excellence, moral strength, and lifelong achievement in Nandi County, Kenya.">
+<meta property="og:image" content="images/logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-<!-- ── NAVBAR ── -->
 <header>
   <div class="logo-area">
-    <div class="logo-crest">M</div>
-    <div class="logo-text">
-      Meteitei School
-      <span>Nandi County, Kenya</span>
-    </div>
+      <img src="images/logo.jpg" alt="Meteitei School Logo" class="logo-crest">
+    <div class="logo-text">Meteitei School<span>Nandi County, Kenya</span></div>
   </div>
-  <nav>
+  <nav id="nav">
     <ul>
       <li><a href="#home">Home</a></li>
+      <li><a href="#principal">Principal</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#academics">Academics</a></li>
       <li><a href="#admissions">Admissions</a></li>
@@ -29,257 +31,222 @@
     </ul>
   </nav>
   <a href="#admissions" class="btn-apply">Apply Now</a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </header>
 
-<!-- ── HERO ── -->
+<!-- HERO -->
 <section id="home" class="hero">
-  <p class="hero-eyebrow">Est. Nandi County, Kenya</p>
-  <h1>Shaping <em>Future</em><br>Leaders</h1>
-  <p>A community dedicated to academic excellence, moral strength, and lifelong achievement.</p>
-  <div class="hero-cta">
-    <a href="#admissions" class="btn-primary">Apply for Admission</a>
-    <a href="#about" class="btn-ghost">Learn More</a>
-  </div>
-
-  <div class="hero-stats">
-    <div class="stat-chip">
-      <strong>100%</strong>
-      <span>KCPE Transition Rate</span>
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Est. Nandi County, Kenya</p>
+      <h1>Shaping <em>Future</em><br>Leaders</h1>
+      <p class="hero-sub">A community dedicated to academic excellence, moral strength, and lifelong achievement in the heart of Nandi County.</p>
+      <div class="hero-cta">
+        <a href="#admissions" class="btn-primary">Apply for Admission</a>
+        <a href="#about" class="btn-ghost">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-chip"><strong>98.5%</strong><span>KCPE Transition Rate</span></div>
+        <div class="stat-chip"><strong>1,800+</strong><span>Students Enrolled</span></div>
+        <div class="stat-chip"><strong>86+</strong><span>Qualified Teachers</span></div>
+      </div>
     </div>
-    <div class="stat-chip">
-      <strong>500+</strong>
-      <span>Students Enrolled</span>
-    </div>
-    <div class="stat-chip">
-      <strong>40+</strong>
-      <span>Qualified Teachers</span>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hc-label">Quick Announcement</div>
+        <div class="hc-title">2025 Form One Selection Open</div>
+        <div class="hc-sub">Applications close January 31, 2026</div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-label">Latest Achievement</div>
+        <div class="hc-title">Top 50 Schools in Nandi County</div>
+        <div class="hc-sub">2024 KCSE National Rankings</div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-label">Upcoming Event</div>
+        <div class="hc-title">Annual Sports Day — May 2026</div>
+        <div class="hc-sub">Parents & guardians are warmly invited</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ── ABOUT ── -->
-<section id="about" class="about">
-  <div class="about-grid">
-    <div class="about-img">
-      <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80" alt="Students at Meteitei School">
-      <div class="about-badge">
-        25+
-        <span>Years of<br>Excellence</span>
+<!-- PRINCIPAL'S MESSAGE -->
+<section id="principal" class="principal-section">
+  <div class="principal-inner reveal">
+    <div class="principal-photo-wrap">
+      <div class="principal-photo-frame">
+        <!--
+          ★ REPLACE THIS IMAGE PATH with the actual principal's photo.
+          Put the photo in your images/ folder and update the src below.
+          Example: src="images/principal.jpg"
+        -->
+        <img
+          src="images/principal.jpg"
+          onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80'"
+          alt="School Principal"
+        >
+        <div class="principal-badge">
+          <strong>50+</strong>
+          <span>Years in<br>Education</span>
+        </div>
       </div>
     </div>
-    <div class="about-text">
-      <p class="section-label">Who We Are</p>
-      <h2 class="section-title">A School Built on Values & Vision</h2>
+    <div class="principal-text">
+      <p class="section-label">Principal's Message</p>
+      <h2 class="section-title">A Word from Our Principal</h2>
       <div class="divider"></div>
-      <p>Meteitei School is committed to academic excellence and the holistic development of every learner. We provide a nurturing environment where students grow intellectually, socially, and morally.</p>
-      <p>Our mission is to prepare learners for a dynamic, competitive world — instilling curiosity, discipline, and compassion in everything we do.</p>
-      <div class="about-values">
-        <span class="value-pill">Excellence</span>
-        <span class="value-pill">Integrity</span>
-        <span class="value-pill">Innovation</span>
-        <span class="value-pill">Community</span>
+      <blockquote class="principal-quote">
+        "Education is not just about passing exams — it is about building character, nurturing talent, and preparing young people to serve their nation with integrity."
+      </blockquote>
+      <div class="principal-body">
+        <p>Welcome to Meteitei School. It is my privilege to lead this institution, which has stood as a beacon of hope and opportunity for families across Nandi County for over two decades.</p>
+        <p>Our dedicated staff, supportive community, and hardworking students continue to make us proud every day. We believe in the full potential of every child who walks through our gates, and we commit to providing the environment, resources, and guidance they need to thrive.</p>
+      </div>
+      <div class="principal-sig">
+        <!-- ★ Replace with the actual principal's name and qualifications -->
+        <span class="sig-name">Mr. / Mrs. [Principal Name]</span>
+        <span class="sig-title">B.Ed (Hons), M.Ed</span>
+        <span class="sig-school">Principal, Meteitei School</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── HISTORY ── -->
-<section id="history" class="history">
-  <div class="history-text">
+<!-- ABOUT -->
+<section id="about" class="section about-section">
+  <div class="section-inner">
+    <div class="about-grid reveal">
+      <div class="about-img">
+        <img src="images/school5.jpg" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80'" alt="Students at Meteitei">
+        <div class="about-badge">25+<span>Years of<br>Excellence</span></div>
+      </div>
+      <div class="about-text">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">A School Built on Values & Vision</h2>
+        <div class="divider"></div>
+        <p>Meteitei School is committed to academic excellence and the holistic development of every learner. We provide a nurturing environment where students grow intellectually, socially, and morally.</p>
+        <p>Our mission is to prepare learners for a dynamic, competitive world — instilling curiosity, discipline, and compassion in everything we do.</p>
+        <div class="about-values">
+          <span class="value-pill">Excellence</span>
+          <span class="value-pill">Integrity</span>
+          <span class="value-pill">Innovation</span>
+          <span class="value-pill">Community</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY -->
+<section id="history" class="section history-section">
+  <div class="section-inner">
     <p class="section-label">Our Story</p>
-    <h2 class="section-title">Rooted in Purpose,<br>Growing Through Time</h2>
+    <h2 class="section-title">Rooted in Purpose, Growing Through Time</h2>
     <div class="divider"></div>
-    <p>Founded to provide quality education in Nandi County, Meteitei School has grown from humble beginnings to become a cornerstone institution in the region. Every decade has brought new milestones — and an unwavering commitment to the children we serve.</p>
-  </div>
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-year">Est.</div>
-      <div class="tl-desc">School founded to serve the Nandi County community with quality primary education.</div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year">ICT</div>
-      <div class="tl-desc">Modern computer labs introduced, bringing digital skills to every learner.</div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year">Sec.</div>
-      <div class="tl-desc">Secondary section launched, offering full progression within one campus.</div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-year">Now</div>
-      <div class="tl-desc">Serving 500+ students, with consistently strong national examination results.</div>
+    <div class="history-grid reveal">
+      <div class="history-text">
+        <p>Founded to provide quality education in Nandi County, Meteitei School has grown from humble beginnings to become a cornerstone institution in the region. Every decade has brought new milestones — and an unwavering commitment to the children we serve.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-year">Est.</div><div class="tl-desc">School founded to serve Nandi County with quality primary education.</div></div>
+        <div class="tl-item"><div class="tl-year">ICT</div><div class="tl-desc">Modern computer labs introduced, bringing digital skills to every learner.</div></div>
+        <div class="tl-item"><div class="tl-year">Sec.</div><div class="tl-desc">Secondary section launched, offering full progression within one campus.</div></div>
+        <div class="tl-item"><div class="tl-year">Now</div><div class="tl-desc">Serving 1,800+ students with consistently strong national examination results.</div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ── ACADEMICS ── -->
-<section id="academics" class="academics">
-  <p class="section-label">What We Offer</p>
-  <h2 class="section-title">Academic Programmes</h2>
-  <div class="divider"></div>
-  <div class="academics-grid">
-    <div class="acad-card">
-      <div class="acad-icon">📚</div>
-      <h3>Primary Education</h3>
-      <p>A strong foundation in literacy, numeracy, and creative thinking — preparing learners for secondary success and beyond.</p>
-    </div>
-    <div class="acad-card">
-      <div class="acad-icon">🎓</div>
-      <h3>Secondary Education</h3>
-      <p>Advanced learning with dedicated streams in sciences, humanities, and leadership development through the CBC curriculum.</p>
-    </div>
-    <div class="acad-card">
-      <div class="acad-icon">💻</div>
-      <h3>ICT & Innovation</h3>
-      <p>Modern computer labs teaching coding, digital literacy, and creative problem-solving skills for the 21st century.</p>
-    </div>
-    <div class="acad-card">
-      <div class="acad-icon">🏃</div>
-      <h3>Sports & Co-curricular</h3>
-      <p>Football, athletics, debate, music, and more — nurturing talent, teamwork, and character outside the classroom.</p>
+<!-- ACADEMICS -->
+<section id="academics" class="section academics-section">
+  <div class="section-inner">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Academic Programmes</h2>
+    <div class="divider"></div>
+    <div class="academics-grid reveal">
+      <div class="acad-card"><div class="acad-icon">📚</div><h3>Primary Education</h3><p>A strong foundation in literacy, numeracy, and creative thinking — preparing learners for secondary success and beyond.</p></div>
+      <div class="acad-card"><div class="acad-icon">🎓</div><h3>Secondary Education</h3><p>Advanced learning with dedicated streams in sciences, humanities, and leadership through the CBC curriculum.</p></div>
+      <div class="acad-card"><div class="acad-icon">💻</div><h3>ICT & Innovation</h3><p>Modern computer labs teaching coding, digital literacy, and creative problem-solving for the 21st century.</p></div>
+      <div class="acad-card"><div class="acad-icon">🏃</div><h3>Sports & Co-curricular</h3><p>Football, athletics, debate, music, and more — nurturing talent, teamwork, and character outside the classroom.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ── ADMISSIONS ── -->
-<section id="admissions" class="admissions">
-  <div class="admission-layout">
-    <div>
-      <p class="section-label">Join Us</p>
-      <h2 class="section-title">Simple, Transparent Admissions</h2>
-      <div class="divider"></div>
-      <p style="color:var(--text-mid);font-size:15px;line-height:1.7;margin-bottom:32px;">Become part of a community dedicated to excellence. Our process is straightforward and welcoming to all families.</p>
-      <ul class="steps">
-        <li>
-          <div class="step-num">1</div>
-          <div class="step-content">
-            <strong>Fill the Application Form</strong>
-            <span>Complete the form online or collect from the school office.</span>
-          </div>
-        </li>
-        <li>
-          <div class="step-num">2</div>
-          <div class="step-content">
-            <strong>Submit Required Documents</strong>
-            <span>Birth certificate, previous report books, transfer letter (if applicable).</span>
-          </div>
-        </li>
-        <li>
-          <div class="step-num">3</div>
-          <div class="step-content">
-            <strong>Assessment or Interview</strong>
-            <span>A brief assessment to help us place your child in the right class.</span>
-          </div>
-        </li>
-        <li>
-          <div class="step-num">4</div>
-          <div class="step-content">
-            <strong>Admission Confirmation</strong>
-            <span>Receive your offer letter and welcome pack from our team.</span>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="contact-form-card">
-      <h3>Send an Enquiry</h3>
-      <form id="contactForm">
-        <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" placeholder="e.g. John Kipchoge" required>
-        </div>
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" placeholder="you@example.com" required>
-        </div>
-        <div class="form-group">
-          <label>Phone Number</label>
-          <input type="tel" placeholder="+254 7XX XXX XXX">
-        </div>
-        <div class="form-group">
-          <label>Message</label>
-          <textarea placeholder="Tell us how we can help you…"></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Send Message →</button>
-      </form>
+<!-- ADMISSIONS -->
+<section id="admissions" class="section admissions-section">
+  <div class="section-inner">
+    <p class="section-label">Join Us</p>
+    <h2 class="section-title">Simple, Transparent Admissions</h2>
+    <div class="divider"></div>
+    <div class="admission-layout reveal">
+      <div>
+        <p class="admissions-intro">Become part of a community dedicated to excellence. Our process is straightforward and welcoming to all families.</p>
+        <ul class="steps">
+          <li><div class="step-num">1</div><div class="step-content"><strong>Fill the Application Form</strong><span>Complete the form online or collect from the school office.</span></div></li>
+          <li><div class="step-num">2</div><div class="step-content"><strong>Submit Required Documents</strong><span>Birth certificate, previous report books, transfer letter (if applicable).</span></div></li>
+          <li><div class="step-num">3</div><div class="step-content"><strong>Assessment or Interview</strong><span>A brief assessment to help us place your child in the right class.</span></div></li>
+          <li><div class="step-num">4</div><div class="step-content"><strong>Admission Confirmation</strong><span>Receive your offer letter and welcome pack from our team.</span></div></li>
+        </ul>
+      </div>
+      <div class="contact-form-card">
+        <h3>Send an Enquiry</h3>
+        <form id="contactForm">
+          <div class="form-group"><label>Your Name</label><input type="text" placeholder="e.g. John Kipchoge" required></div>
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@example.com" required></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+254 7XX XXX XXX"></div>
+          <div class="form-group"><label>Message</label><textarea placeholder="Tell us how we can help you…"></textarea></div>
+          <button type="submit" class="btn-submit">Send Message →</button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ── GALLERY ── -->
-<section id="gallery" class="gallery-section">
-  <p class="section-label">Campus Life</p>
-  <h2 class="section-title">Our School Gallery</h2>
-  <div class="divider"></div>
-  <div class="gallery-grid">
-    <div class="g-item">
-      <img src="images/school1.jpg" onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80'" alt="School Gate">
-      <div class="g-overlay"><span class="g-label">School Gate</span></div>
-    </div>
-    <div class="g-item">
-      <img src="images/school2.jpg" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80'" alt="Classrooms">
-      <div class="g-overlay"><span class="g-label">Classrooms</span></div>
-    </div>
-    <div class="g-item">
-      <img src="images/school3.jpg" onerror="this.src='https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=80'" alt="Students">
-      <div class="g-overlay"><span class="g-label">Our Students</span></div>
-    </div>
-    <div class="g-item">
-      <img src="images/school4.jpg" onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80'" alt="Library">
-      <div class="g-overlay"><span class="g-label">Library</span></div>
-    </div>
-    <div class="g-item">
-      <img src="images/school5.jpg" onerror="this.src='https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80'" alt="Science Lab">
-      <div class="g-overlay"><span class="g-label">Science Lab</span></div>
+<!-- GALLERY -->
+<section id="gallery" class="section gallery-section">
+  <div class="section-inner">
+    <p class="section-label">Campus Life</p>
+    <h2 class="section-title">Our School Gallery</h2>
+    <div class="divider"></div>
+    <div class="gallery-grid reveal">
+      <div class="g-item"><img src="images/school1.jpg" onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80'" alt="School Gate"><div class="g-overlay"><span class="g-label">School Gate</span></div></div>
+      <div class="g-item"><img src="images/school2.jpg" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80'" alt="Classrooms"><div class="g-overlay"><span class="g-label">Classrooms</span></div></div>
+      <div class="g-item"><img src="images/school3.jpg" onerror="this.src='https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=80'" alt="Students"><div class="g-overlay"><span class="g-label">Our Students</span></div></div>
+      <div class="g-item"><img src="images/school4.jpg" onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80'" alt="Library"><div class="g-overlay"><span class="g-label">Library</span></div></div>
+      <div class="g-item"><img src="images/school5.jpg" onerror="this.src='https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80'" alt="Science Lab"><div class="g-overlay"><span class="g-label">Assembly </span></div></div>
     </div>
   </div>
 </section>
 
-<!-- ── CONTACT ── -->
+<!-- CONTACT -->
 <section id="contact" class="contact-section">
   <div class="contact-grid">
-    <div class="contact-info">
+    <div class="contact-info reveal">
       <p class="section-label">Get In Touch</p>
       <h2>We'd Love<br>to Hear from You</h2>
       <div class="divider"></div>
       <p>Whether you have a question about admissions, fees, or just want to visit the school — our doors are always open.</p>
-      <div class="contact-detail">
-        <div class="c-icon">📍</div>
-        <div class="c-detail">
-          <strong>Location</strong>
-          <span>Nandi County, Kenya</span>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="c-icon">📞</div>
-        <div class="c-detail">
-          <strong>Phone</strong>
-          <span>+254 757 769 044</span>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="c-icon">📧</div>
-        <div class="c-detail">
-          <strong>Email</strong>
-          <span>info@meteitei.ac.ke</span>
-        </div>
-      </div>
+      <div class="contact-detail"><div class="c-icon">📍</div><div class="c-detail"><strong>Location</strong><span>Nandi County, Kenya</span></div></div>
+      <div class="contact-detail"><div class="c-icon">📞</div><div class="c-detail"><strong>Phone</strong><span>+254 757 769 044</span></div></div>
+      <div class="contact-detail"><div class="c-icon">📧</div><div class="c-detail"><strong>Email</strong><span>info@meteitei.ac.ke</span></div></div>
     </div>
-    <div class="map-box">
+    <div class="map-box reveal">
       <iframe src="https://www.google.com/maps?q=Nandi+County+Kenya&output=embed" title="Meteitei School Location" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
 <footer>
   <p>© 2026 <strong>Meteitei School</strong> &nbsp;·&nbsp; Nandi County, Kenya &nbsp;·&nbsp; Excellence in Education</p>
 </footer>
 
-<!-- ── WHATSAPP ── -->
 <a href="https://wa.me/254757769044" class="whatsapp" title="Chat on WhatsApp">💬</a>
-
-<!-- ── SCROLL TOP ── -->
-<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<button id="topBtn" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script src="script.js"></script>
+
 </body>
 </html>
