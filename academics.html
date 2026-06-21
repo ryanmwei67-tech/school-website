@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteitei Senior School Comprehensive Analytics Dashboard</title>
+    <!-- Chart.js CDN for Interactive Graphs -->
+    <script src="https://jsdelivr.net"></script>
+    <style>
+        :root {
+            --primary-color: #0c2340; /* Royal Academy Blue */
+            --secondary-color: #1e3a8a;
+            --accent-color: #b38f4f; /* Academic Gold */
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+            --text-main: #334155;
+        }
+
+   
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+       /* ─── HEADER ─── */
+header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 200;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  background: rgba(26,54,40,0.97);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+}
+ 
+.logo-area { display: flex; align-items: center; gap: 0.9rem; }
+.logo-crest {
+  width: 44px; height: 44px;
+  background-image: url('images/image/logo.jpg');
+  background-size: cover;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--forest);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.3);
+}
+.logo-text { font-family: var(--serif); font-size: 1.125rem; font-weight: 600; color: var(--white); line-height: 1.2; }
+.logo-text span { display: block; font-family: var(--sans); font-size: 0.7rem; font-weight: 300; color: rgba(255,255,255,0.5); letter-spacing: 0.06em; text-transform: uppercase; }
+ 
+
+        .acad-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            padding: 32px;
+            max-width: 1200px;
+            width: 100%;
+            border-top: 6px solid var(--accent-color);
+        }
+
+        .acad-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .acad-icon {
+            font-size: 28px;
+            background: #fef3c7;
+            padding: 8px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .acad-card h3 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .acad-card p {
+            color: var(--text-main);
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0 0 24px 0;
+        }
+
+        .section-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748b;
+            margin: 28px 0 12px 0;
+            font-weight: 600;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 8px;
+        }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+
+        .kcse-performance-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: center;
+            min-width: 700px;
+        }
+
+        .kcse-performance-table th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-weight: 500;
+            padding: 12px 8px;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .kcse-performance-table th.left-align, 
+        .kcse-performance-table td.left-align {
+            text-align: left;
+            padding-left: 16px;
+            font-weight: 600;
+        }
+
+        .grade-header-contrast {
+            color: #fef3c7;
+        }
+
+        .ms-header {
+            background-color: #1e293b;
+            color: #fff;
+        }
+
+        .kcse-performance-table th.highlight-col,
+        .kcse-performance-table td.highlight-col {
+            background-color: #f8fafc;
+            font-weight: 700;
+            color: var(--primary-color);
+            border-left: 1px solid var(--border-color);
+        }
+
+        .kcse-performance-table td {
+            padding: 12px 8px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .kcse-performance-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .kcse-performance-table tr:hover td {
+            background-color: #f8fafc;
+        }
+
+        /* Dashboard Breakdown Layout */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-top: 16px;
+        }
+
+        @media (min-width: 900px) {
+            .dashboard-grid {
+                grid-template-columns: 2fr 3fr;
+            }
+            .full-width-chart {
+                grid-column: span 2;
+            }
+        }
+
+        .chart-box {
+            background: #fafafa;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .chart-box h4 {
+            margin: 0 0 16px 0;
+            font-size: 14px;
+            color: #475569;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+        }
+    </style>
+</head>
+<body>
+
+  <header>
+  <div class="logo-area">
+      <img src="frontend/images/image/logo1.jpg" alt="Meteitei School Logo" class="logo-crest">
+    <div class="logo-text">Meteitei School<span>Tinderet, Nandi County</span></div>
+  </div>
+
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</header>
+
+<div class="acad-card">
+    <div class="acad-header">
+        <div class="acad-icon">📊</div>
+        <h3>Strong KCSE Results</h3>
+       </div>
+       <div><p>98.5% transition rate of candidates placed directly to university through KUCCPS in the KCSE 2025.</p></div>
+            
+    <div class="section-title">Historical Grade Summary Matrix</div>
+    <div class="table-responsive">
+        <table class="kcse-performance-table">
+            <thead>
+                <tr>
+                    <th class="left-align">Year</th>
+                    <th>No</th>
+                    <th class="grade-header-contrast">A</th>
+                    <th class="grade-header-contrast">A-</th>
+                    <th>B+</th>
+                    <th>B</th>
+                    <th>B-</th>
+                    <th>C+</th>
+                    <th>C</th>
+                    <th>C-</th>
+                    <th>D+</th>
+                    <th>D</th>
+                    <th>D-</th>
+                    <th>E</th>
+                    <th>X</th>
+                    <th class="highlight-col ms-header">MS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="left-align">2025</td>
+                    <td>490</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>52</td>
+                    <td>198</td>
+                    <td>186</td>
+                    <td>43</td>
+                    <td>8</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="highlight-col">8.1963</td>
+                </tr>
+                <tr>
+                    <td class="left-align">2024</td>
+                    <td>431</td>
+                    <td>0</td>
+                    <td>23</td>
+                    <td>102</td>
+                    <td>166</td>
+                    <td>111</td>
+                    <td>23</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="highlight-col">8.169</td>
+                </tr>
+                <tr>
+                    <td class="left-align">2023</td>
+                    <td>358</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>26</td>
+                    <td>102</td>
+                    <td>170</td>
+                    <td>53</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="highlight-col">8.0391</td>
+                </tr>
+                <tr>
+                    <td class="left-align">2022</td>
+                    <td>337</td>
+                    <td>0</td>
+                    <td>18</td>
+                    <td>63</td>
+                    <td>122</td>
+                    <td>94</td>
+                    <td>32</td>
+                    <td>7</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="highlight-col">8.77</td>
+                </tr>
+                <tr>
+                    <td class="left-align">2021</td>
+                    <td>334</td>
+                    <td>2</td>
+                    <td>25</td>
+                    <td>53</td>
+                    <td>111</td>
+                    <td>93</td>
+                    <td>39</td>
+                    <td>11</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="highlight-col">8.716</td>
+                </tr>
+                <tr>
+                    <td class="left-align">2020</td>
+                    <td>225</td>
+                    <td>0</td>
+                    <td>14</td>
+                    <td>45</td>
+                    <td>82</td>
+                    <td>57</td>
+                    <td>21</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="highlight-col">8.804</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>    
+            

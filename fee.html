@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meteitei Boys Senior School — Jifunze Uelimike</title>
+<link rel="icon" href="frontend/images/image/logo1.jpg" type="image/jpeg">
+<meta property="og:title" content="Meteitei Boys Senior School — Jifunze Uelimike, Tinderet, Kenya">
+<meta property="og:description" content="Built stone by stone since 1975. A community dedicated to discipline, hard work, integrity and excellence in Tinderet, Nandi County.">
+<meta property="og:image" content="frontend/images/logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --primary: #1d4ed8;
+        --secondary: #0ea5e9;
+        --dark: #071426;
+        --dark2: #0f172a;
+        --glass: rgba(255, 255, 255, 0.08);
+        --font-family: 'Poppins', sans-serif;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-family);
+        background: linear-gradient(135deg, #071426, #0f172a, #000000);
+        color: #ffffff;
+        min-height: 100vh;
+        padding-top: 90px;
+        transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    body.light-mode {
+        background: linear-gradient(135deg, #f1f5f9, #dbeafe);
+        color: #0f172a;
+    }
+
+    header {
+        position: fixed;
+        inset: 0 0 auto 0;
+        z-index: 200;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+        background: rgba(12, 35, 64, 0.95);
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: background 0.4s ease;
+    }
+
+    body.light-mode header {
+        background: rgba(255, 255, 255, 0.95);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+     
+    .logo-area { 
+        display: flex; 
+        align-items: center; 
+        gap: 0.9rem; 
+    }
+
+    .logo-crest {
+        width: 44px; 
+        height: 44px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+        box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.3);
+    }
+
+    .logo-text { 
+        font-size: 1.125rem; 
+        font-weight: 600; 
+        color: #ffffff; 
+        line-height: 1.2; 
+    }
+
+    body.light-mode .logo-text {
+        color: #0f172a;
+    }
+
+    .logo-text span { 
+        display: block; 
+        font-size: 0.7rem; 
+        font-weight: 400; 
+        color: rgba(255, 255, 255, 0.6); 
+        letter-spacing: 0.06em; 
+        text-transform: uppercase; 
+    }
+
+    body.light-mode .logo-text span {
+        color: #475569;
+    }
+
+    .theme-btn {
+        border: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        background: var(--primary);
+        color: white;
+        font-family: var(--font-family);
+        font-weight: 500;
+        transition: opacity 0.2s ease;
+    }
+
+    .theme-btn:hover {
+        opacity: 0.9;
+    }
+
+    /* Hero */
+    .hero {
+        text-align: center;
+        padding: 40px 8%;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .hero p {
+        max-width: 700px;
+        margin: auto;
+        color: #cbd5e1;
+        font-size: 1.1rem;
+    }
+
+    body.light-mode .hero p {
+        color: #475569;
+    }
+
+    /* Cards Layout Container */
+    .portal-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 20px 0 100px 0;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        padding: 35px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Used to ensure button lines up cleanly at bottom */
+    .card p {
+        flex-grow: 1;
+        line-height: 1.8;
+        color: #e2e8f0;
+        margin-bottom: 20px;
+    }
+
+    .card.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .card:hover {
+        transform: translateY(-8px) !important;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    }
+
+    .icon {
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+
+    .card h2 {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .btn {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background: linear-gradient(135deg, #0c2340 0%, #1d4ed8 100%);
+        padding: 14px 25px;
+        border-radius: 50px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        font-weight: 500;
+    }
+
+    .btn:hover {
+        transform: scale(1.03);
+        box-shadow: 0 5px 15px rgba(29, 78, 216, 0.4);
+    }
+
+    /* Light mode context overrides */
+    body.light-mode .card {
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    body.light-mode .card h2 {
+        color: #0c2340;
+    }
+
+    body.light-mode .card p {
+        color: #334155;
+    }
+
+    /* Fixed UI Elements */
+    #topBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background: var(--primary);
+        color: white;
+        cursor: pointer;
+        display: none;
+        font-size: 20px;
+        z-index: 99;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp {
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        background: #25D366;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 26px;
+        z-index: 99;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .whatsapp:hover {
+        transform: scale(1.1);
+    }
+
+    footer {
+        text-align: center;
+        padding: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+        color: #94a3b8;
+    }
+
+    body.light-mode footer {
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        color: #64748b;
+    }
+
+    @media(max-width: 768px){
+        .hero h1 { font-size: 2.3rem; }
+        header { padding: 0 1.5rem; }
+        .logo-text { font-size: 1rem; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo-area">
+        <img src="frontend/images/image/logo1.jpg" alt="Meteitei School Logo" class="logo-crest">
+        <div class="logo-text">Meteitei School<span>Tinderet, Nandi County</span></div>
+    </div>
+    <button class="theme-btn" id="themeToggle" type="button">🌙 Dark Mode</button>
+</header>
+
+<section class="hero">
+    <h1>Student Portal</h1>
+    <p>Access school fee payment information, learner academic performance and download important documents.</p>
+</section>
+
+<div class="portal-container">
+    <!-- School Fees -->
+    <div class="card">
+        <div class="icon">💳</div>
+        <h2>School Fees Payment</h2>
+        <p>
+            Bank: Kenya Commercial Bank (KCB) - Nandi hills Branch<br>
+            Account Name: Meteitei Secondary School<br>
+            Account Number: 1106817230 <br>
+            M-Pesa Paybill: 522123 (Account Number: 20152K followed by the student's admission number)
+        </p>
+        <a href="#" class="btn">Pay School Fees</a>
+    </div>
+
+    <!-- Zeraki -->
+    <div class="card">
+        <div class="icon">📊</div>
+        <h2>Zeraki Results</h2>
+        <p>Parents and learners can access academic reports through Zeraki Analytics integration platforms.</p>
+        <a href="https://analytics.zeraki.co.ke/" target="_blank" rel="noopener noreferrer" class="btn">Check Results</a>
+    </div>
+
+    <!-- PDF Structure -->
+    <div class="card">
+        <div class="icon">📄</div>
+        <h2>Fee Structure</h2>
+        <p>Download the latest structural payment breakdown documentation details in print-friendly PDF format.</p>
+        <a href="doc/fee-structure.pdf" download class="btn">Download PDF</a>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 Meteitei Senior School. All Rights Reserved.
+</footer>
+
+<!-- WhatsApp Shortcut Floating Element -->
+<a class="whatsapp" href="https://wa.me/254732943697" target="_blank" rel="noopener noreferrer">💬</a>
+
+<!-- Back To Top Button Trigger Element -->
+<button id="topBtn" type="button">↑</button>
+
+<script>
+/* Interface Color Mode Toggle */
+const toggle = document.getElementById("themeToggle");
+toggle.onclick = () => {
+    document.body.classList.toggle("light-mode");
+    if(document.body.classList.contains("light-mode")){
+        toggle.innerHTML = "☀️ Light Mode";
+    } else {
+        toggle.innerHTML = "🌙 Dark Mode";
+    }
+};
+
+/* Scroll Animation Module */
+const cards = document.querySelectorAll(".card");
+function checkCards() {
+    cards.forEach(card => {
+        const position = card.getBoundingClientRect().top;
+        if(position < window.innerHeight - 50){
+            card.classList.add("show");
+        }
+    });
+}
+window.addEventListener("scroll", checkCards);
+window.addEventListener("DOMContentLoaded", checkCards); // Run on load so initial elements appear
+
+/* Back To Top Module Control script */
+const topBtn = document.getElementById("topBtn");
+window.addEventListener("scroll", () => {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+});
+
+topBtn.onclick = function(){
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+</script>
+
+</body>
+</html>

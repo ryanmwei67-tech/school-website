@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admissions | Meteitei Senior School</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#0A2540;
+    --secondary:#1E3E62;
+    --accent:#D4AF37;
+    --accent-hover:#B89224;
+    --white:#ffffff;
+    --bg:#f5f7fa;
+    --card:#ffffff;
+    --text:#1e293b;
+    --muted:#64748b;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+body.dark{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#ffffff;
+    --muted:#cbd5e1;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(to bottom, #0404ed, #010b60, black);
+    color:var(--text);
+    transition:.3s;
+
+}
+
+/* NAVBAR */
+header{
+    background:rgba(10,37,64,.96);
+    padding:15px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo h2{
+    font-family:'Cinzel',serif;
+}
+
+.logo span{
+    display:block;
+    font-size:.8rem;
+    color:#ddd;
+}
+
+.theme-btn{
+    border:none;
+    background:var(--accent);
+    color:#0A2540;
+    padding:10px 18px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* HERO */
+.hero{
+    background:
+    linear-gradient(rgba(10,37,64,.85),rgba(10,37,64,.85)),
+    url("images/image/school-bg.jpg") center/cover;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+/* MAIN */
+.wrapper{
+    width:min(1200px,90%);
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:30px;
+}
+
+@media(max-width:900px){
+    .wrapper{
+        grid-template-columns:1fr;
+    }
+}
+
+.card{
+    background:var(--card);
+    padding:30px;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+}
+
+h2{
+    margin-bottom:20px;
+    color:var(--primary);
+    font-family:'Cinzel',serif;
+}
+
+body.dark h2{
+    color:var(--accent);
+}
+
+.checklist li{
+    list-style:none;
+    margin-bottom:15px;
+}
+
+.checklist li::before{
+    content:"✓ ";
+    color:green;
+    font-weight:bold;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+    position:center;
+
+}
+
+.logo h2{
+    font-family:'Cinzel',serif;
+}
+
+.logo span{
+    display:block;
+    font-size:.8rem;
+    color:linear-gradient(to right, #049c32, #5eff00);
+}
+
+/* FORM */
+.form-group{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+@media(max-width:700px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+
+.submit-btn{
+    width:100%;
+    border:none;
+    background:var(--accent);
+    color:#0A2540;
+    padding:16px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    background:var(--accent-hover);
+    transform:translateY(-2px);
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:var(--muted);
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="frontend/images/image/logo1.jpg" alt="School Logo">
+        <div>
+            <h2>Meteitei Senior School</h2>
+            <span>Tinderet, Nandi County</span>
+        </div>
+    </div>
+
+    <button class="theme-btn" id="themeBtn">
+        🌙 Dark Mode
+    </button>
+</header>
+
+<section class="hero">
+    <h1>Meteitei Senior School</h1>
+    <p>Nurturing Talent. Educating Future-Ready Individuals.</p>
+</section>
+
+<div class="wrapper">
+
+    <!-- LEFT -->
+    <div class="card">
+        <h2>Admission Checklist</h2>
+
+        <ul class="checklist">
+            <li>Completed Application Form</li>
+            <li>Admission Letter</li>
+            <li>Admission Code</li>
+            <li>KJSEA Result Slip</li>
+            <li>Leaving Certificate</li>
+            <li>Birth Certificate Copy</li>
+            <li>Passport Photos</li>
+            <li>Parent/Guardian ID Copy</li>
+        </ul>
+         <div class="logo">
+        <img src="frontend/images/image/logo1.jpg" alt="School Logo">
+        <div>
+            <h2>Meteitei Senior School</h2>
+            <span>Tinderet, Nandi County</span>
+        </div>
+    </div>
+    </div>
+
+    
+
+    <!-- RIGHT -->
+    <div class="card">
+
+        <h2>Application Portal</h2>
+
+        <form>
+
+            <div class="grid">
+
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" type="text" required placeholder="Enter first name">
+                </div>
+
+                <div class="form-group">
+                    <label for="middleName">Middle Name</label>
+                    <input id="middleName" type="text" placeholder="Enter middle name">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" type="text" required placeholder="Enter last name">
+            </div>
+
+            <div class="grid">
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input id="dob" type="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="nationality">Nationality</label>
+                <input id="nationality" type="text" value="Kenyan" placeholder="Enter nationality">
+            </div>
+
+            <h2>Parent / Guardian Details</h2>
+
+            <div class="form-group">
+                <label for="parentName">Parent Name</label>
+                <input id="parentName" type="text" placeholder="Enter parent or guardian name">
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input id="phoneNumber" type="tel" placeholder="Enter phone number">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" rows="4" placeholder="Enter address"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Submit Application
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<footer>
+© 2026 Meteitei Senior School. All Rights Reserved.
+</footer>
+
+<script>
+const btn = document.getElementById("themeBtn");
+
+btn.onclick = function () {
+
+    document.body.classList.toggle("dark");
+
+    if(document.body.classList.contains("dark")){
+        btn.innerHTML = "☀ Light Mode";
+    } else {
+        btn.innerHTML = "🌙 Dark Mode";
+    }
+
+};
+</script>
+
+</body>
+</html>
