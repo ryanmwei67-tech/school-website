@@ -3,74 +3,292 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meteitei School — Excellence in Education</title>
-<link rel="icon" href="frontend/images/image/school0.jpg" type="image/jpeg">
-<meta property="og:title" content="Meteitei School — Excellence in Education, Nandi County">
-<meta property="og:description" content="A community dedicated to academic excellence, moral strength, and lifelong achievement in Nandi County, Kenya.">
-<meta property="og:image" content="images/logo.jpg">
+<title>Meteitei Boys Senior School — Jifunze Uelimike</title>
+<link rel="icon" href="frontend/images/image/logo1.jpg" type="image/jpeg">
+<meta property="og:title" content="Meteitei Boys Senior School — Jifunze Uelimike, Tinderet, Kenya">
+<meta property="og:description" content="Built stone by stone since 1975. A community dedicated to discipline, hard work, integrity and excellence in Tinderet, Nandi County.">
+<meta property="og:image" content="frontend/images/image/logo1.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="frontend/static/style.css">
 
 </head>
 <body>
 
 <header>
   <div class="logo-area">
-      <img src="images/logo.jpg" alt="Meteitei School Logo" class="logo-crest">
-    <div class="logo-text">Meteitei School<span>Nandi County, Kenya</span></div>
+      <img src="frontend/images/image/logo1.jpg" alt="Meteitei School Logo" class="logo-crest">
+    <div class="logo-text">Meteitei School<span>Tinderet, Nandi County</span></div>
   </div>
   <nav id="nav">
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#principal">Principal</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#academics">Academics</a></li>
-      <li><a href="#admissions">Admissions</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
+
+        <li><a href="#home">Home</a></li>
+
+        <li class="dropdown">
+         <li class="dropdown">
+
+    <a href="#about">About Us</a>
+    <ul class="dropdown-menu">
+        <li><a href="#principal">Principal's Message</a></li>
+        <li><a href="principals.html">Principals' History</a></li>
+        <li><a href="deputies.html">Deputy Principals</a></li>
+        <li><a href="captain.html">School Captain</a></li>
+        <li><a href="board.html">Board of Management</a></li>
+        <li><a href="staff.html">Staff Directory</a></li>
+    </ul>
+  </li>
+
+        <li class="dropdown">
+            <a href="#academics">Academics</a>
+
+            <ul class="dropdown-menu">
+                <li><a href="academics.html">Departments</a></li>
+                <li><a href="subjects.html">Subjects</a></li>
+                <li><a href="fee.html">Student Portal</a></li>
+                <li><a href="results.html">KCSE Results</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="clubs.html">ICT Centre</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#admissions">Admissions</a>
+
+            <ul class="dropdown-menu">
+                <li><a href="admissions.html">Admission Process</a></li>
+                <li><a href="fee.html">Fee Structure</a></li>
+                <li><a href="downloads.html">Admission Forms</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="clubs.html">Clubs & Societies</a>
+
+            <ul class="dropdown-menu">
+                <li><a href="ictclub.html">ICT Clubs</a></li>
+                <li><a href="debate.html">Debate Society</a></li>
+                <li><a href="drama.html">Drama Club</a></li>
+                <li><a href="music.html">Music Society</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#gallery">News & Events</a>
+
+            <ul class="dropdown-menu">
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="virtual-tour.html">Virtual Tour</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#contact">Contact</a>
+
+            <ul class="dropdown-menu">
+                <li><a href="contacts.html">Contact Us</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="careers.html">Careers</a></li>
+            </ul>
+        </li>
+        
     </ul>
   </nav>
-  <a href="#admissions" class="btn-apply">Apply Now</a>
+  <a href="admissions.html" class="btn-apply">Apply Now</a>
   <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </header>
 
 <!-- HERO -->
 <section id="home" class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-inner">
-    <div class="hero-text">
-      <p class="hero-eyebrow">Est. Nandi County, Kenya</p>
-      <h1>Shaping <em>Future</em><br>Leaders</h1>
-      <p class="hero-sub">A community dedicated to academic excellence, moral strength, and lifelong achievement in the heart of Nandi County.</p>
-      <div class="hero-cta">
-        <a href="#admissions" class="btn-primary">Apply for Admission</a>
-        <a href="#about" class="btn-ghost">Learn More</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-chip"><strong>98.5%</strong><span>KCPE Transition Rate</span></div>
-        <div class="stat-chip"><strong>1,800+</strong><span>Students Enrolled</span></div>
-        <div class="stat-chip"><strong>86+</strong><span>Qualified Teachers</span></div>
-      </div>
+
+    <!-- Video Background -->
+    <video id="hero-tourvideo" autoplay muted loop playsinline>
+      <source src="frontend/video/campus.mp4" type="video/mp4">
+    </video>
+
+    <!-- Animated Background Layer -->
+    <div class="hero-bg"></div>
+
+    <!-- Dark Overlay -->
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner">
+
+        <!-- LEFT CONTENT -->
+        <div class="hero-text">
+
+            <p class="hero-eyebrow">
+                Songhor, Tinderet &middot; Established 1975
+            </p>
+
+            <h1>
+                Experience
+                Jifunze<em> Uelimike</em>
+            </h1>
+
+            <p class="hero-sub">
+
+               Built stone by stone since 1975 — donated by the Taptengelei 
+               community, raised by five decades of chairpersons, 
+               principals, parents and pupils. Producing talented, holistic 
+               boys and men of distinction.
+            </p>
+
+            <div class="hero-cta">
+
+                <a href="virtual-tour.html"
+                   class="btn-tour">
+
+                    Start Virtual Tour
+
+                </a>
+
+                <a href="admissions.html"
+                   class="btn-ghost">
+
+                    Apply for Admission
+
+                </a>
+
+                <a href="#about"
+                   class="btn-ghost">
+
+                    Discover More
+
+                </a>
+
+                <a href="fee.html"
+                   class="btn-primary">
+
+                    Student Portal
+
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div class="stat-chip">
+
+                    <strong>98.5%</strong>
+
+                    <span>University Placement</span>
+
+                </div>
+
+                <div class="stat-chip">
+
+                    <strong>1,800+</strong>
+
+                    <span>Students</span>
+
+                </div>
+
+                <div class="stat-chip">
+
+                    <strong>80+</strong>
+
+                    <span>Teachers</span>
+
+                </div>
+
+                <div class="stat-chip">
+
+                    <strong>50+</strong>
+
+                    <span>Years of Excellence</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="hero-visual">
+
+            <div class="hero-card featured">
+
+                <div class="hc-label">
+
+                    Virtual Tour
+
+                </div>
+
+                <div class="hc-title">
+
+                    Walk Around Our Campus
+
+                </div>
+
+                <div class="hc-sub">
+
+                    Explore every corner of Meteitei School in an
+                    interactive digital experience.
+
+                </div>
+
+            </div>
+
+            <div class="hero-card">
+
+                <div class="hc-label">
+
+                    Academic Excellence
+
+                </div>
+
+                <div class="hc-title">
+
+                    98.5% University Transition
+
+                </div>
+
+                <div class="hc-sub">
+
+                    Consistently producing outstanding KCSE results.
+
+                </div>
+
+            </div>
+
+            <div class="hero-card">
+
+                <div class="hc-label">
+
+                    Innovation
+
+                </div>
+
+                <div class="hc-title">
+
+                    Smart Learning Environment
+
+                </div>
+
+                <div class="hc-sub">
+
+                    ICT Labs • Library • Science Labs • Agriculture
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-    <div class="hero-visual">
-      <div class="hero-card">
-        <div class="hc-label">Quick Announcement</div>
-        <div class="hc-title">2025 Form One Selection Open</div>
-        <div class="hc-sub">Applications close January 31, 2026</div>
-      </div>
-      <div class="hero-card">
-        <div class="hc-label">Latest Achievement</div>
-        <div class="hc-title">Top 50 Schools in Nandi County</div>
-        <div class="hc-sub">2024 KCSE National Rankings</div>
-      </div>
-      <div class="hero-card">
-        <div class="hc-label">Upcoming Event</div>
-        <div class="hc-title">Annual Sports Day — May 2026</div>
-        <div class="hc-sub">Parents & guardians are warmly invited</div>
-      </div>
-    </div>
-  </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#principal" class="scroll-indicator">
+
+        <span></span>
+
+        <p>Scroll</p>
+
+    </a>
+
 </section>
 
 <!-- PRINCIPAL'S MESSAGE -->
@@ -84,32 +302,32 @@
           Example: src="images/principal.jpg"
         -->
         <img
-          src="images/principal.jpg"
+          src="frontend/images/principal.jpg"
           onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80'"
           alt="School Principal"
         >
         <div class="principal-badge">
           <strong>50+</strong>
-          <span>Years in<br>Education</span>
+          <span>Years Since<br>Founding</span>
         </div>
       </div>
+      <a href="principals.html" class="btn-primary">View Former Principal →</a>
     </div>
     <div class="principal-text">
       <p class="section-label">Principal's Message</p>
       <h2 class="section-title">A Word from Our Principal</h2>
       <div class="divider"></div>
       <blockquote class="principal-quote">
-        "Education is not just about passing exams — it is about building character, nurturing talent, and preparing young people to serve their nation with integrity."
+        "Jifunze uelimike — we believe in discipline, hard work, integrity and excellence, producing talented, holistic boys who will be men of distinction."
       </blockquote>
       <div class="principal-body">
-        <p>Welcome to Meteitei School. It is my privilege to lead this institution, which has stood as a beacon of hope and opportunity for families across Nandi County for over two decades.</p>
-        <p>Our dedicated staff, supportive community, and hardworking students continue to make us proud every day. We believe in the full potential of every child who walks through our gates, and we commit to providing the environment, resources, and guidance they need to thrive.</p>
+        <p>Welcome to Meteitei Boys Secondary School. It is my privilege to lead this institution, founded in 1975 on land donated by the Taptengelei community and built up by generations of board chairpersons, parents, and well-wishers.</p>
+        <p>Our dedicated staff, supportive community, and hardworking students continue to make us proud every day. We believe in the full potential of every boy who walks through our gates, and we commit to providing the environment, resources, and guidance they need to thrive.</p>
       </div>
       <div class="principal-sig">
-        <!-- ★ Replace with the actual principal's name and qualifications -->
-        <span class="sig-name">Mr. / Mrs. [Principal Name]</span>
-        <span class="sig-title">B.Ed (Hons), M.Ed</span>
-        <span class="sig-school">Principal, Meteitei School</span>
+        <span class="sig-name">Mr. Barnabas Too</span>
+        <span class="sig-title">Chief Principal, since 2017</span>
+        <span class="sig-school">Meteitei Boys Secondary School</span>
       </div>
     </div>
   </div>
@@ -120,21 +338,29 @@
   <div class="section-inner">
     <div class="about-grid reveal">
       <div class="about-img">
-        <img src="images/school5.jpg" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80'" alt="Students at Meteitei">
-        <div class="about-badge">25+<span>Years of<br>Excellence</span></div>
+        <img src="frontend/images/school1.jpg" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80'" alt="Students at Meteitei">
+        <div class="about-badge">50+<span>Years of<br>Growth</span></div>
       </div>
       <div class="about-text">
         <p class="section-label">Who We Are</p>
-        <h2 class="section-title">A School Built on Values & Vision</h2>
+        <h2 class="section-title">A School Built on Values &amp; Vision</h2>
         <div class="divider"></div>
-        <p>Meteitei School is committed to academic excellence and the holistic development of every learner. We provide a nurturing environment where students grow intellectually, socially, and morally.</p>
-        <p>Our mission is to prepare learners for a dynamic, competitive world — instilling curiosity, discipline, and compassion in everything we do.</p>
+        <p>Our vision is to be the epitome of success.
+           Our mission is to create an enabling environment that nurtures talents and educates individuals to be reliable, holistic and flexible to changes in the modern world.</p>
+        <p>From a single stream at founding, the school has grown to four streams with 1,800+ students, 45 TSC teachers, 40 BOM teachers and 47 support staff.</p>
         <div class="about-values">
-          <span class="value-pill">Excellence</span>
+          <span class="value-pill">Discipline</span>
+          <span class="value-pill">Hard Work</span>
           <span class="value-pill">Integrity</span>
-          <span class="value-pill">Innovation</span>
-          <span class="value-pill">Community</span>
+          <span class="value-pill">Excellence</span>
+          <span class="value-pill">God Fearing</span>
+          <span class="value-pill">Responsibility</span>
+          <span class="value-pill">Efficiency</span>
         </div>
+        <div>
+           <a href="about.html" class="project-link primary">
+            View More Information →</a></div>
+          </div>
       </div>
     </div>
   </div>
@@ -148,105 +374,30 @@
     <div class="divider"></div>
     <div class="history-grid reveal">
       <div class="history-text">
-        <p>Founded to provide quality education in Nandi County, Meteitei School has grown from humble beginnings to become a cornerstone institution in the region. Every decade has brought new milestones — and an unwavering commitment to the children we serve.</p>
+        <p>On 19th May 1975, the foundation stone was laid by His Excellency Daniel Toroitich Arap Moi, then Vice President, flagged off by MP Jean Marie Seroney. The land was a gift from the Taptengelei community — and almost everything since has been added by hand, harvest, and constituency fund.</p>
       </div>
       <div class="timeline">
-        <div class="tl-item"><div class="tl-year">Est.</div><div class="tl-desc">School founded to serve Nandi County with quality primary education.</div></div>
-        <div class="tl-item"><div class="tl-year">ICT</div><div class="tl-desc">Modern computer labs introduced, bringing digital skills to every learner.</div></div>
-        <div class="tl-item"><div class="tl-year">Sec.</div><div class="tl-desc">Secondary section launched, offering full progression within one campus.</div></div>
-        <div class="tl-item"><div class="tl-year">Now</div><div class="tl-desc">Serving 1,800+ students with consistently strong national examination results.</div></div>
+        <div class="tl-item"><div class="tl-year">1975</div><div class="tl-desc">Foundation stone laid by H.E. Daniel Toroitich Arap Moi, then Vice President. Land donated by the Taptengelei community.</div></div>
+        <div class="tl-item"><div class="tl-year">1980</div><div class="tl-desc">Hon. Henry Kosgey helps build Kosgey, Barng'etuny and Abura dormitories as BOM chairperson.</div></div>
+        <div class="tl-item"><div class="tl-year">1988</div><div class="tl-desc">Hon. Joseph K. Letting supports eight teachers' houses, Tendenei dormitory, power installation, and the dining hall.</div></div>
+        <div class="tl-item"><div class="tl-year">2004</div><div class="tl-desc">Mr. Paul K. Lilan's 18-year tenure brings form four blocks, Kiptarus &amp; Ng'orbobit dormitories, CCTV, and a standby generator.</div></div>
+        <div class="tl-item"><div class="tl-year">Now</div><div class="tl-desc">Under Dr. Thomas Bor, serving 1,039 students with Phase IV construction ongoing through CDF and T.I.G.</div></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ACADEMICS -->
-<section id="academics" class="section academics-section">
-  <div class="section-inner">
-    <p class="section-label">What We Offer</p>
-    <h2 class="section-title">Academic Programmes</h2>
-    <div class="divider"></div>
-    <div class="academics-grid reveal">
-      <div class="acad-card"><div class="acad-icon">📚</div><h3>Primary Education</h3><p>A strong foundation in literacy, numeracy, and creative thinking — preparing learners for secondary success and beyond.</p></div>
-      <div class="acad-card"><div class="acad-icon">🎓</div><h3>Secondary Education</h3><p>Advanced learning with dedicated streams in sciences, humanities, and leadership through the CBC curriculum.</p></div>
-      <div class="acad-card"><div class="acad-icon">💻</div><h3>ICT & Innovation</h3><p>Modern computer labs teaching coding, digital literacy, and creative problem-solving for the 21st century.</p></div>
-      <div class="acad-card"><div class="acad-icon">🏃</div><h3>Sports & Co-curricular</h3><p>Football, athletics, debate, music, and more — nurturing talent, teamwork, and character outside the classroom.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ADMISSIONS -->
-<section id="admissions" class="section admissions-section">
-  <div class="section-inner">
-    <p class="section-label">Join Us</p>
-    <h2 class="section-title">Simple, Transparent Admissions</h2>
-    <div class="divider"></div>
-    <div class="admission-layout reveal">
-      <div>
-        <p class="admissions-intro">Become part of a community dedicated to excellence. Our process is straightforward and welcoming to all families.</p>
-        <ul class="steps">
-          <li><div class="step-num">1</div><div class="step-content"><strong>Fill the Application Form</strong><span>Complete the form online or collect from the school office.</span></div></li>
-          <li><div class="step-num">2</div><div class="step-content"><strong>Submit Required Documents</strong><span>Birth certificate, previous report books, transfer letter (if applicable).</span></div></li>
-          <li><div class="step-num">3</div><div class="step-content"><strong>Assessment or Interview</strong><span>A brief assessment to help us place your child in the right class.</span></div></li>
-          <li><div class="step-num">4</div><div class="step-content"><strong>Admission Confirmation</strong><span>Receive your offer letter and welcome pack from our team.</span></div></li>
-        </ul>
-      </div>
-      <div class="contact-form-card">
-        <h3>Send an Enquiry</h3>
-        <form id="contactForm">
-          <div class="form-group"><label>Your Name</label><input type="text" placeholder="e.g. John Kipchoge" required></div>
-          <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@example.com" required></div>
-          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+254 7XX XXX XXX"></div>
-          <div class="form-group"><label>Message</label><textarea placeholder="Tell us how we can help you…"></textarea></div>
-          <button type="submit" class="btn-submit">Send Message →</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery" class="section gallery-section">
-  <div class="section-inner">
-    <p class="section-label">Campus Life</p>
-    <h2 class="section-title">Our School Gallery</h2>
-    <div class="divider"></div>
-    <div class="gallery-grid reveal">
-      <div class="g-item"><img src="images/school1.jpg" onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80'" alt="School Gate"><div class="g-overlay"><span class="g-label">School Gate</span></div></div>
-      <div class="g-item"><img src="images/school2.jpg" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80'" alt="Classrooms"><div class="g-overlay"><span class="g-label">Classrooms</span></div></div>
-      <div class="g-item"><img src="images/school3.jpg" onerror="this.src='https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=80'" alt="Students"><div class="g-overlay"><span class="g-label">Our Students</span></div></div>
-      <div class="g-item"><img src="images/school4.jpg" onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80'" alt="Library"><div class="g-overlay"><span class="g-label">Library</span></div></div>
-      <div class="g-item"><img src="images/school5.jpg" onerror="this.src='https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80'" alt="Science Lab"><div class="g-overlay"><span class="g-label">Assembly </span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact-section">
-  <div class="contact-grid">
-    <div class="contact-info reveal">
-      <p class="section-label">Get In Touch</p>
-      <h2>We'd Love<br>to Hear from You</h2>
-      <div class="divider"></div>
-      <p>Whether you have a question about admissions, fees, or just want to visit the school — our doors are always open.</p>
-      <div class="contact-detail"><div class="c-icon">📍</div><div class="c-detail"><strong>Location</strong><span>Nandi County, Kenya</span></div></div>
-      <div class="contact-detail"><div class="c-icon">📞</div><div class="c-detail"><strong>Phone</strong><span>+254 757 769 044</span></div></div>
-      <div class="contact-detail"><div class="c-icon">📧</div><div class="c-detail"><strong>Email</strong><span>info@meteitei.ac.ke</span></div></div>
-    </div>
-    <div class="map-box reveal">
-      <iframe src="https://www.google.com/maps?q=Nandi+County+Kenya&output=embed" title="Meteitei School Location" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 <strong>Meteitei School</strong> &nbsp;·&nbsp; Nandi County, Kenya &nbsp;·&nbsp; Excellence in Education</p>
+  <p>© 2026 <strong>Meteitei School</strong> &nbsp;·&nbsp; Songhor, Tinderet, Kenya &nbsp;·&nbsp; Jifunze Uelimike</p>
 </footer>
 
-<a href="https://wa.me/254757769044" class="whatsapp" title="Chat on WhatsApp">💬</a>
+<a href="tel:+254732943697" class="whatsapp" title="Call the school">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+</a>
 <button id="topBtn" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<script src="script.js"></script>
+<script src="frontend/static/script.js"></script>
+
 
 </body>
 </html>
