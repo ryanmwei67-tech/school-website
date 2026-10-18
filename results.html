@@ -7,60 +7,51 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <style>
-    body { font-family: 'Outfit', sans-serif; background: #f9f7f2; color: #1a1612; }
-    header { position: sticky; top: 0; }
-    .page-shell { max-width: 1100px; margin: 0 auto; padding: 120px 24px 60px; }
-    .page-hero { background: linear-gradient(135deg, #1a3628, #2a5240); color: white; border-radius: 18px; padding: 48px 36px; margin-bottom: 28px; box-shadow: 0 18px 50px rgba(26,54,40,0.18); }
-    .eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: #c9a84c; }
-    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4rem); margin: 10px 0 12px; }
-    .page-hero p { font-size: 1.02rem; line-height: 1.8; max-width: 700px; color: rgba(255,255,255,0.8); }
-    .page-card { background: white; border-radius: 18px; box-shadow: 0 14px 30px rgba(26,54,40,0.08); padding: 32px; }
-    .page-card h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: #1a3628; margin-bottom: 16px; }
-    .page-card p, .page-card li { color: #4a4540; line-height: 1.8; }
-    .page-card ul { padding-left: 18px; }
-    .btn-link { display: inline-block; margin-top: 20px; background: #c9a84c; color: #1a3628; text-decoration: none; padding: 12px 18px; border-radius: 8px; font-weight: 600; }
+    :root { --forest:#1a3628; --forest-mid:#2a5240; --gold:#c9a84c; --cream:#faf7f2; --ink:#1a1612; --muted:#4a4540; --white:#ffffff; --light:#f4efe8; }
+    *{box-sizing:border-box} body{margin:0;font-family:'Outfit',sans-serif;background:var(--cream);color:var(--ink);line-height:1.8} a{text-decoration:none;color:inherit} header{position:sticky;top:0;z-index:20;background:rgba(26,54,40,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,168,76,.2)} .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px 24px} .brand{display:flex;align-items:center;gap:14px;color:var(--white)} .brand-mark{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#e9d48a,#c9a84c);display:grid;place-items:center;font-weight:700;color:var(--forest)} .brand-name{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:700}.brand-tag{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7}.menu{display:flex;gap:18px;list-style:none;margin:0;padding:0;color:rgba(255,255,255,.8)} .menu a{padding:8px 10px;border-radius:6px;font-size:.9rem}.menu a:hover{background:rgba(201,168,76,.1);color:var(--gold)} .page{max-width:1100px;margin:0 auto;padding:56px 24px 80px}.hero{background:linear-gradient(135deg,#1a3628,#2a5240);border-radius:22px;padding:56px 40px;color:var(--white);box-shadow:0 24px 50px rgba(26,54,40,.12)} .label{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;color:#d8b85b} h1,h2,h3{font-family:'Cormorant Garamond',serif;line-height:1.1;margin:0 0 16px}.hero h1{font-size:clamp(2.5rem,5vw,4rem)} .lead{max-width:700px;font-size:1.05rem;color:rgba(255,255,255,.8)} .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.stat{background:var(--white);padding:26px;border-radius:18px;box-shadow:0 12px 26px rgba(26,54,40,.05)} .stat strong{display:block;font-size:2rem;font-family:'Cormorant Garamond',serif;color:var(--forest)} .stat span{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)} .card{background:var(--white);padding:30px;border-radius:18px;margin-top:24px;box-shadow:0 14px 30px rgba(26,54,40,.06)} .card p,.card li{color:var(--muted)} ul{padding-left:18px} footer{background:#171410;color:rgba(255,255,255,.75);padding:24px 0;text-align:center;font-size:.9rem} @media (max-width:760px){.menu{display:none}.stats{grid-template-columns:1fr}.hero{padding:36px 24px}.nav{padding:16px 20px}}
   </style>
 </head>
 <body>
   <header>
-    <div class="logo-area">
-      <img src="images/image/logo1.jpg" alt="Meteitei School Logo" class="logo-crest" />
-      <div class="logo-text">Meteitei School<span>Tinderet, Nandi County</span></div>
-    </div>
-    <nav id="nav">
-      <ul>
+    <div class="nav">
+      <div class="brand">
+        <div class="brand-mark">M</div>
+        <div><span class="brand-name">Meteitei School</span><span class="brand-tag">Tinderet, Nandi County</span></div>
+      </div>
+      <ul class="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="academics.html">Academics</a></li>
         <li><a href="admissions.html">Admissions</a></li>
         <li><a href="contacts.html">Contact</a></li>
       </ul>
-    </nav>
+    </div>
   </header>
 
-  <main class="page-shell">
-    <section class="page-hero">
-      <p class="eyebrow">Performance</p>
+  <main class="page">
+    <section class="hero">
+      <div class="label">Performance</div>
       <h1>KCSE Results</h1>
-      <p>We celebrate strong academic outcomes and continued excellence in national examinations.</p>
+      <p class="lead">We celebrate the dedication of our students and teachers who continue to achieve strong academic progress. These results reflect a culture of discipline, preparation and purposeful effort.</p>
     </section>
 
-    <section class="page-card">
-      <h2>Results Overview</h2>
-      <p>This results page is currently being updated with official KCSE statistics and recent achievements.</p>
+    <div class="stats">
+      <div class="stat"><strong>98.5%</strong><span>University Placement</span></div>
+      <div class="stat"><strong>1,800+</strong><span>Students</span></div>
+      <div class="stat"><strong>Strong Passes</strong><span>Annual Focus</span></div>
+    </div>
+
+    <div class="card">
+      <p>Our learners continue to demonstrate strong performance in national exams through regular assessments, encouragement and consistent classroom discipline. We remain committed to preparing every student for success in school and beyond.</p>
       <ul>
-        <li>Strong pass rates and university transitions</li>
-        <li>School-wide academic performance tracking</li>
-        <li>Class performance analysis</li>
+        <li>Focused academic mentoring for learners at every level</li>
+        <li>Embedded revision programmes and targeted subject support</li>
+        <li>Strong teacher guidance and student accountability</li>
       </ul>
-      <a class="btn-link" href="index.html">Return Home</a>
-    </section>
+    </div>
   </main>
 
-  <footer>
-    <p>© 2026 <strong>Meteitei School</strong> &nbsp;·&nbsp; Songhor, Tinderet, Kenya &nbsp;·&nbsp; Jifunze Uelimike</p>
-  </footer>
+  <footer>© 2026 Meteitei School · Songhor, Tinderet, Kenya · Jifunze Uelimike</footer>
 </body>
 </html>

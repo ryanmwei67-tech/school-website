@@ -1,206 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Meteitei Boys Senior School</title>
-    <style>
-
-        :root {
-            --primary-color: #003366;
-            --secondary-color: #f4f4f4;
-            --text-color: #333;
-            --accent-color: #d4af37;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            background-color: #fff;
-        }
-         .logo-area { 
-        display: flex; 
-        align-items: center; 
-        gap: 0.9rem; 
-    }
-
-    .logo-crest {
-        width: 44px; 
-        height: 44px;
-        border-radius: 50%;
-        object-fit: cover;
-        flex-shrink: 0;
-        box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.3);
-    }
-
-    .logo-text { 
-        font-size: 1.125rem; 
-        font-weight: 600; 
-        color: #ffffff; 
-        line-height: 1.2; 
-    }
-
-    body.light-mode .logo-text {
-        color: #0f172a;
-    }
-
-    .logo-text span { 
-        display: block; 
-        font-size: 0.7rem; 
-        font-weight: 400; 
-        color: rgba(255, 255, 255, 0.6); 
-        letter-spacing: 0.06em; 
-        text-transform: uppercase; 
-    }
-
-    body.light-mode .logo-text span {
-        color: #475569;
-    }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            border-bottom: 4px solid var(--accent-color);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        header p {
-            margin: 0.5rem 0 0 0;
-            font-style: italic;
-            color: #e0e0e0;
-        }
-         nav {
-        margin-top: 1.5rem;
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-    }
-    nav a {
-        color: #e0e0e0;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-    }
-    nav a:hover, nav a.active {
-        color: #fff;
-        background-color: rgba(255, 255, 255, 0.15);
-    }
-    nav a.active {
-        border-bottom: 2px solid var(--accent-color);
-        border-radius: 4px 4px 0 0;
-    }
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-        section {
-            margin-bottom: 2.5rem;
-        }
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 0.3rem;
-            font-size: 1.5rem;
-        }
-        p {
-            text-align: justify;
-            margin-bottom: 1.2rem;
-        }
-        .highlight-box {
-            background-color: var(--secondary-color);
-            border-left: 5px solid var(--accent-color);
-            padding: 1rem 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0 4px 4px 0;
-        }
-        footer {
-            background-color: #222;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            font-size: 0.9rem;
-            margin-top: 4rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Meteitei School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --forest:#1a3628; --forest-mid:#2a5240; --gold:#c9a84c; --cream:#faf7f2; --ink:#1a1612; --muted:#4a4540; --white:#ffffff; --light:#f4efe8; }
+    *{box-sizing:border-box} body{margin:0;font-family:'Outfit',sans-serif;background:var(--cream);color:var(--ink);line-height:1.8} a{text-decoration:none;color:inherit} img{max-width:100%;display:block} header{position:sticky;top:0;z-index:20;background:rgba(26,54,40,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,168,76,.2)} .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px 24px} .brand{display:flex;align-items:center;gap:14px;color:var(--white)} .brand-mark{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#e9d48a,#c9a84c);display:grid;place-items:center;font-weight:700;color:var(--forest)} .brand-name{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:700}.brand-tag{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7}.menu{display:flex;gap:18px;list-style:none;margin:0;padding:0;color:rgba(255,255,255,.8)} .menu a{padding:8px 10px;border-radius:6px;font-size:.9rem}.menu a:hover{background:rgba(201,168,76,.1);color:var(--gold)} .page{max-width:1100px;margin:0 auto;padding:56px 24px 80px}.hero{background:linear-gradient(135deg,#1a3628,#2a5240);border-radius:22px;padding:56px 40px;color:var(--white);box-shadow:0 24px 50px rgba(26,54,40,.12)} .label{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;color:#d8b85b} h1,h2,h3{font-family:'Cormorant Garamond',serif;line-height:1.1;margin:0 0 16px}.hero h1{font-size:clamp(2.5rem,5vw,4rem)} .lead{max-width:700px;font-size:1.05rem;color:rgba(255,255,255,.8)} .grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:36px;padding-top:40px}.card{background:var(--white);border-radius:18px;padding:32px;box-shadow:0 16px 35px rgba(26,54,40,.06)} .card h2{font-size:2.2rem;color:var(--forest)} .card p{color:var(--muted)} ul{padding-left:18px;color:var(--muted)} .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}.stat{background:var(--light);border:1px solid rgba(26,54,40,.08);border-radius:12px;padding:18px}.stat strong{display:block;font-size:1.7rem;color:var(--forest);font-family:'Cormorant Garamond',serif}.stat span{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)} footer{background:#171410;color:rgba(255,255,255,.75);padding:24px 0;text-align:center;font-size:.9rem} @media (max-width:760px){.menu{display:none}.grid,.stats{grid-template-columns:1fr}.hero{padding:36px 24px}.nav{padding:16px 20px}}
+  </style>
 </head>
 <body>
-
-    <header>
-            <!-- Add this code inside your <header> tag, right below the <p> tag -->
-    <div class="logo-area">
-        <img src="frontend/images/image/logo1.jpg" alt="Meteitei School Logo" class="logo-crest">
-        <div class="logo-text">Meteitei School<span>Tinderet, Nandi County</span></div>
-    </div>            
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html" class="active">About Us</a>
-    <a href="academics.html">Academics</a>
-    <a href="admissions.html">Admissions & Fees</a>
-    <a href="contact.html">Contact</a>
-</nav>
-        <h1>Meteitei Boys Senior School</h1>
-        <p>Chapter One: Background Information</p>
-    </header>
-
-    <div class="container">
-        <section id="introduction">
-            <h2>1.0 Introduction</h2>
-            <p>
-                This chapter summarizes the history of the school and how the school is managed. It also lists the BOM chairpersons since inception, PTA/P.A. Chairpersons since inception, Principals since inception, current teaching staff, current non-teaching staff, current BOM members, current PTA/P.A. members, and the local community's current support. In this chapter, we also get a brief review of the school's academic performance and the need for a strategic plan.
-            </p>
-        </section>
-
-        <section id="history">
-            <h2>1.1 History of the School</h2>
-            <p>
-                On 19th May, 1972, the foundation stone was laid by His Excellency Daniel Toroitich arap Moi, then Vice President of the Republic of Kenya and donated by the Meteitei community.
-            </p>
-            <p>
-                In 1980, Hon. Kosgey, minister for infrastructure and MP Tinderet saving center, joined hands with the local school community together with Mr. Abraham He helped build a library and the first administration block.
-            </p>
-            <p>
-                Even after his tenure, through CDF has two practical science laboratory and block, modern dormitory and multipurpose dormitory.
-            </p>
-            <p>
-                Progress i.e. the current phase two store building.
-            </p>
-            <p>
-                As board chairman from 1988 Hon Joseph J. Leting member of Parliament to eight of x 'x' x 'x' x 'x' x 'x' local community leadership.
-            </p>
-            <p>
-                The late Dr. Biwott's tenure of office as BOM chairperson saw completion of the dining hall and the kitchen.
-            </p>
-            <div class="highlight-box">
-                <p><strong>Infrastructure Milestones:</strong></p>
-                <p>
-                    Through the able leadership of Tinderet NG-CDF, the school has completed a complex project i.e. an administration block over store building, phase 1 & 2 on classrooms and an administrative block.
-                </p>
-            </div>
-            <p>
-                NGCDF built laboratory, ICT hub, the school present on the school infrastructure which was by the past BOM chairperson we have built: modern administration block, dining hall, kitchen, labs (physics, chemistry, biology), modern tuition blocks, boys dormitories, academic office block, CCTV security cameras all over. Most of the structure standard, modern permanent structure.
-            </p>
-            <p>
-                The school land composed of standard 40-acre piece of land. Part of the land is standard for school expansion. Part of the land is occupied by structured buildings and a play area.
-            </p>
-        </section>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="brand-mark">M</div>
+        <div><span class="brand-name">Meteitei School</span><span class="brand-tag">Tinderet, Nandi County</span></div>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+      </ul>
     </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2026 Meteitei Boys Senior School. All Rights Reserved.</p>
-    </footer>
+  <main class="page">
+    <section class="hero">
+      <div class="label">Our Story</div>
+      <h1>Built on values. Ready for the future.</h1>
+      <p class="lead">Meteitei Boys Senior School stands as a beacon of character, scholarship and leadership in Tinderet. Since its founding in 1975, the school has grown into a disciplined learning community dedicated to academic excellence and holistic development.</p>
+    </section>
 
+    <div class="grid">
+      <div class="card">
+        <h2>Our Mission</h2>
+        <p>To nurture every learner into a responsible, God-fearing and capable young man who contributes positively to family, community and nation. We equip students with knowledge, values and confidence to thrive in a rapidly changing world.</p>
+        <p>Our school culture is grounded in discipline, diligence, respect and service. Through academic structure, moral instruction and active co-curricular engagement, every boy is challenged to become a well-rounded citizen.</p>
+        <h2 style="margin-top:24px;">What We Champion</h2>
+        <ul>
+          <li>Academic excellence and disciplined study habits</li>
+          <li>Integrity, responsibility and community service</li>
+          <li>Leadership development and student voice</li>
+          <li>Innovation, creativity and holistic growth</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>School Snapshot</h2>
+        <div class="stats">
+          <div class="stat"><strong>1975</strong><span>Founded</span></div>
+          <div class="stat"><strong>1,800+</strong><span>Students</span></div>
+          <div class="stat"><strong>80+</strong><span>Teachers</span></div>
+        </div>
+        <p style="margin-top:18px;">Originally founded through community partnership and local support, the school has grown into a respected institution offering broad opportunities in academics, sports, leadership and service. We remain grounded in the principles that made the school strong: focus, excellence and character.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2026 Meteitei School · Songhor, Tinderet, Kenya · Jifunze Uelimike</footer>
 </body>
 </html>
